@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-export function useLocalstorage(initialValue: {login: string, loggedIn: boolean }, key: string) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useLocalstorage(initialValue: any, key: string) {
     const getValue = () => {
         const storage = localStorage.getItem(key);
 
