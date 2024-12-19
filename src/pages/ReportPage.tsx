@@ -5,7 +5,6 @@ import { IReportData } from "../types/report.interface";
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { generateFetchDate, logOut } from "../utils/utils";
-import { useLocalstorage } from "../utils/hooks/useLocalstorage";
 
 const ReportPage: React.FC = () => {
 
@@ -14,7 +13,7 @@ const ReportPage: React.FC = () => {
   const { isAuth } = useAuth();
   const redirectLoginPage = useNavigate();
   const [dateRange, setDateRange] = useState<moment.Moment[]>([]);
-  const [data, setData] = useLocalstorage([], 'data');
+  const [data, setData] = useState<IReportData[]>([]);
  
   useEffect(() => {
     if (data.length === 0) {
@@ -39,7 +38,7 @@ const ReportPage: React.FC = () => {
     setData(selectedReport);
   };
     
-  const onDateRangeChange = (dates: any) => {
+  const onDateRangeChange = (dates: moment.Moment[]): void => {
     setDateRange(dates);
   };
 
@@ -75,7 +74,7 @@ return isAuth.loggedIn ? (
     <div style={{ padding: '20px' }}>
         <h2 className="mb-2 text-s">Отчет</h2>
         <Space direction="vertical" className="mb-2">
-            <RangePicker onChange={onDateRangeChange} />
+            <RangePicker onChange={onDateRangeChange} cleA />
         </Space>
         <div className="flex justify-between">
                 <Button type="primary" onClick={fetchData}>

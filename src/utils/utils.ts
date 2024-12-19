@@ -5,7 +5,6 @@ import moment from "moment";
 export function logOut(redirectLoginPage: NavigateFunction) {
     if (localStorage.getItem('user')) {
         localStorage.removeItem('user');
-        localStorage.removeItem('data');
         redirectLoginPage('/login', {replace: true });
     }
 }

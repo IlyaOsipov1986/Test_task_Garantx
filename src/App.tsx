@@ -7,12 +7,12 @@ const App: React.FC = () => {
   
   return (
     <div className="app">
-      <Routes>
-        <Route path="/" element={<ReportPage/>}/>
-        <Route path="/login" element={<LoginPage/>}/>
-        <Route path="/reset-password" element={<ResetPasswordPage/>}/>
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<ReportPage/>}/>
+      <Route path="/login" element={<LoginPage/>}/>
+      <Route path="/reset-password" element={<ResetPasswordPage/>}/>
+    </Routes>
+  </div>
   )
 }
 
