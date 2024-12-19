@@ -74,7 +74,7 @@ return isAuth.loggedIn ? (
     <div style={{ padding: '20px' }}>
         <h2 className="mb-2 text-s">Отчет</h2>
         <Space direction="vertical" className="mb-2">
-            <RangePicker onChange={onDateRangeChange} cleA />
+            <RangePicker onChange={onDateRangeChange}/>
         </Space>
         <div className="flex justify-between">
                 <Button type="primary" onClick={fetchData}>
