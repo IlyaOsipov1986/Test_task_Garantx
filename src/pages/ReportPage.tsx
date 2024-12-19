@@ -23,7 +23,8 @@ const ReportPage: React.FC = () => {
   }, [])
 
   const fetchData = () => {
-    if (dateRange.length === 0) {
+    console.log(dateRange)
+    if (dateRange === null || dateRange.length === 0) {
         notification.error({ message: 'Необходимо выбрать даты для формирования отчета' });
         return;
     }
