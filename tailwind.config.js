@@ -8,7 +8,7 @@ export default {
       extend: {
         colors: {
             primary: {
-              gold: '#FEEDDB'
+              ligthBlue: '#ebf4ff'
             }
           }
         }
