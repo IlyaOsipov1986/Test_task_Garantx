@@ -39,7 +39,7 @@ const ReportPage: React.FC = () => {
     setData(selectedReport);
   };
     
-  const onDateRangeChange = (dates: moment.Moment[]): void => {
+  const onDateRangeChange = (dates: any) => {
     setDateRange(dates);
   };
 
