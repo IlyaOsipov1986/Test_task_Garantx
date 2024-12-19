@@ -7,7 +7,7 @@ const ResetPasswordPage: React.FC = () => {
     const redirectLoginPage = useNavigate();
 
     const onFinish = (values: IAuth) => {
-        notification.success({ message: 'Пароль успешно сброшен' });
+        notification.success({ message: `Пароль для пользователя ${values.login} успешно сброшен` });
         redirectLoginPage('/login'); // Переход на страницу логина
     };
 
