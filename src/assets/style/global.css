@@ -48,7 +48,7 @@ button {
     min-height: 100%;
 }
 @layer components {
-    .login-register-page-wrap {
+    .login-page-wrap {
         position: fixed;
         top: 50%;
         left: 50%;
